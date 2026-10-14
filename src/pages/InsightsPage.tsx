@@ -93,7 +93,7 @@ const InsightsPage: React.FC = () => {
                   <Pie data={churnDonut} cx="50%" cy="50%" innerRadius={55} outerRadius={80} dataKey="value" paddingAngle={3}>
                     {churnDonut.map((_, i) => <Cell key={i} fill={DONUT_COLORS[i]} />)}
                   </Pie>
-                  <Tooltip formatter={(v: number) => [v.toLocaleString(), '']} contentStyle={{ fontSize: 11, borderRadius: 6 }} />
+                  <Tooltip formatter={(value) => [Number(value ?? 0).toLocaleString(), ''] as [string, string]} contentStyle={{ fontSize: 11, borderRadius: 6 }} />
                 </PieChart>
               </ResponsiveContainer>
             </div>

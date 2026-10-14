@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Sidebar, { type Page } from './components/Sidebar';
 import TopNav from './components/TopNav';
 import OverviewPage from './pages/OverviewPage';

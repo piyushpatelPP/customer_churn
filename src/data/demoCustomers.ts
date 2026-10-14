@@ -2,7 +2,6 @@ import type {
   CustomerInput,
   DemoCustomer,
   PredictionResult,
-  RiskFactor,
 } from '../types/customer';
 
 // ─────────────────────────────────────────────────────────────────────────────

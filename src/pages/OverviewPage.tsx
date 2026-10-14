@@ -92,11 +92,9 @@ function useCounter(target: number, duration: number = 1200) {
 const KPICard: React.FC<{ kpi: typeof kpis[0]; index: number }> = ({ kpi, index }) => {
   const Icon = kpi.icon;
   const counter = useCounter(kpi.value, 800 + index * 200);
-  const display =
-    kpi.formatted.includes('%')
-      ? `${(counter / kpi.value) * parseFloat(kpi.formatted)}`.replace(/\..*/, '') + '.00%'
-      : counter.toLocaleString();
-  const finalDisplay = kpi.formatted;
+  const display = kpi.formatted.includes('%')
+    ? `${((counter / kpi.value) * parseFloat(kpi.formatted)).toFixed(2)}%`
+    : counter.toLocaleString();
 
   return (
     <div className={`card p-5 border ${kpi.borderColor} hover:shadow-md transition-shadow`}>
@@ -108,7 +106,7 @@ const KPICard: React.FC<{ kpi: typeof kpis[0]; index: number }> = ({ kpi, index 
           {kpi.subtitle}
         </span>
       </div>
-      <div className={`text-3xl font-bold ${kpi.textColor} animate-count`}>{finalDisplay}</div>
+      <div className={`text-3xl font-bold ${kpi.textColor} animate-count`}>{display}</div>
       <div className="text-sm text-slate-500 mt-1 font-medium">{kpi.label}</div>
     </div>
   );
@@ -182,7 +180,7 @@ const OverviewPage: React.FC<OverviewPageProps> = ({ onNavigate, onLoadExample }
                   ))}
                 </Pie>
                 <Tooltip
-                  formatter={(v: number) => [v.toLocaleString(), '']}
+                  formatter={(value) => [Number(value ?? 0).toLocaleString(), ''] as [string, string]}
                   contentStyle={{ background: '#1e2d4a', border: 'none', borderRadius: 8, color: '#fff', fontSize: 12 }}
                 />
               </PieChart>

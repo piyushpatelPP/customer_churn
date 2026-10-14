@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { ChevronLeft, ChevronRight, LayoutDashboard, UserSearch, BarChart2, Activity, Info, Beaker } from 'lucide-react';
 
 type Page = 'overview' | 'predict' | 'insights' | 'performance' | 'about';

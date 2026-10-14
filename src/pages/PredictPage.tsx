@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import {
-  User, Wifi, CreditCard, RotateCcw, Zap, AlertCircle,
-  CheckCircle, AlertTriangle, Minus, ChevronDown, FlaskConical,
-  TrendingDown, TrendingUp, ArrowRight, Loader2
+  User, Wifi, CreditCard, RotateCcw, Zap,
+  CheckCircle, AlertTriangle, Minus, FlaskConical,
+  TrendingDown, TrendingUp, Loader2
 } from 'lucide-react';
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
 import type { CustomerInput, PredictionResult } from '../types/customer';
@@ -104,7 +104,7 @@ const ResultPanel: React.FC<{ result: PredictionResult; input: CustomerInput; on
                   <Pie data={donutData} cx="50%" cy="50%" innerRadius={38} outerRadius={56} dataKey="value" paddingAngle={3}>
                     {donutData.map((_, i) => <Cell key={i} fill={COLORS[i]} />)}
                   </Pie>
-                  <Tooltip formatter={(v: number) => [`${v}%`, '']} contentStyle={{ fontSize: 11, borderRadius: 6 }} />
+                  <Tooltip formatter={(value) => [`${Number(value ?? 0)}%`, ''] as [string, string]} contentStyle={{ fontSize: 11, borderRadius: 6 }} />
                 </PieChart>
               </ResponsiveContainer>
             </div>

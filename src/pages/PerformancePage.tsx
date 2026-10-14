@@ -75,7 +75,7 @@ const PerformancePage: React.FC = () => {
               <PolarAngleAxis dataKey="metric" tick={{ fontSize: 11, fill: '#64748b' }} />
               <PolarRadiusAxis angle={90} domain={[0, 100]} tick={{ fontSize: 9 }} />
               <Radar name="TabPFN" dataKey="value" stroke="#2563eb" fill="#2563eb" fillOpacity={0.2} strokeWidth={2} />
-              <Tooltip formatter={(v: number) => [`${v.toFixed(2)}%`, '']} contentStyle={{ fontSize: 11, borderRadius: 6 }} />
+              <Tooltip formatter={(value) => [`${Number(value ?? 0).toFixed(2)}%`, ''] as [string, string]} contentStyle={{ fontSize: 11, borderRadius: 6 }} />
             </RadarChart>
           </ResponsiveContainer>
         </div>
@@ -156,7 +156,7 @@ const PerformancePage: React.FC = () => {
             <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
             <XAxis dataKey="model" tick={{ fontSize: 12 }} />
             <YAxis domain={[0, 100]} tick={{ fontSize: 11 }} tickFormatter={v => `${v}%`} />
-            <Tooltip formatter={(v: number) => [`${v.toFixed(1)}%`, '']} contentStyle={{ fontSize: 11, borderRadius: 6 }} />
+            <Tooltip formatter={(value) => [`${Number(value ?? 0).toFixed(1)}%`, ''] as [string, string]} contentStyle={{ fontSize: 11, borderRadius: 6 }} />
             <Legend wrapperStyle={{ fontSize: 11 }} />
             <Bar dataKey="rocAuc" name="ROC-AUC" fill="#2563eb" radius={[4, 4, 0, 0]} />
             <Bar dataKey="f1" name="F1 Score" fill="#8b5cf6" radius={[4, 4, 0, 0]} />

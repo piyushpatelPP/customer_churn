@@ -101,7 +101,7 @@ function computeIllustrativeScore(c: CustomerInput): number {
 // Risk factor builder for non-predefined inputs
 // ─────────────────────────────────────────────────────────────────────────────
 
-function buildRiskFactors(c: CustomerInput, score: number): RiskFactor[] {
+function buildRiskFactors(c: CustomerInput): RiskFactor[] {
   const factors: RiskFactor[] = [];
 
   if (c.contract === 'Month-to-month') {
@@ -223,7 +223,7 @@ export function simulatePrediction(input: CustomerInput): PredictionResult {
 
   const predictedClass: PredictedClass = riskLevel === 'Low' ? 'Stay' : 'Churn';
 
-  const riskFactors = buildRiskFactors(input, score);
+  const riskFactors = buildRiskFactors(input);
   const recommendation = buildRecommendation(riskLevel, input);
 
   return {
