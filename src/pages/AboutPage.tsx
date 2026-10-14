@@ -74,7 +74,7 @@ const AboutPage: React.FC = () => {
   return (
     <div className="p-6 space-y-8 max-w-5xl mx-auto">
       {/* Header */}
-      ```tsx
+   
 {/* Header */}
 <div
   className="card p-6 sm:p-8 text-white border-0 overflow-hidden"
