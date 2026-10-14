@@ -74,51 +74,100 @@ const AboutPage: React.FC = () => {
   return (
     <div className="p-6 space-y-8 max-w-5xl mx-auto">
       {/* Header */}
-      <div className="card p-6 bg-navy text-white border-0">
-        <div className="flex items-start justify-between gap-4">
-          <div>
-            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-3 py-1 mb-3">
-              <FlaskConical size={12} className="text-cyan-300" />
-              <span className="text-xs text-cyan-200 font-semibold">ML Lab Mini Project · Interactive Prototype</span>
-            </div>
-            <h2 className="text-2xl font-bold mb-2">Predicting Customer Churn with TabPFN</h2>
-            <p className="text-blue-200 text-sm max-w-2xl leading-relaxed">
-              An exploration of whether customer information from a telecommunications dataset can help
-              identify customers likely to leave the service, using TabPFN — a transformer-based
-              in-context learning model for tabular data.
-            </p>
-          </div>
+      ```tsx
+{/* Header */}
+<div
+  className="card p-6 sm:p-8 text-white border-0 overflow-hidden"
+  style={{ backgroundColor: '#111B32' }}
+>
+  <div className="mb-6">
+    <div className="inline-flex items-center gap-2 rounded-full px-3 py-1 mb-4 border border-cyan-300/30 bg-cyan-300/10">
+      <FlaskConical size={14} className="text-cyan-300" />
+      <span className="text-sm text-cyan-200 font-semibold">
+        ML Lab Mini Project
+      </span>
+    </div>
+
+    <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white mb-4">
+      Predicting Customer Churn
+      <span className="block text-cyan-300 mt-1">
+        with TabPFN
+      </span>
+    </h2>
+
+    <p className="text-slate-300 text-base max-w-3xl leading-relaxed">
+      An exploration of whether customer information from a
+      telecommunications dataset can help identify customers likely
+      to leave the service using TabPFN, a transformer-based model
+      for tabular data.
+    </p>
+  </div>
+
+  <div className="grid sm:grid-cols-3 gap-4">
+    {/* Students */}
+    <div className="rounded-xl p-4 border border-white/10 bg-white/5">
+      <div className="flex items-center gap-2 mb-4">
+        <GraduationCap size={18} className="text-cyan-300" />
+        <span className="text-xs text-cyan-200 font-bold uppercase tracking-widest">
+          Project Team
+        </span>
+      </div>
+
+      <div className="mb-4">
+        <div className="text-lg sm:text-xl font-extrabold tracking-tight text-white">
+          Piyush Patel
         </div>
-        <div className="mt-5 grid sm:grid-cols-3 gap-3">
-          <div className="bg-white/10 rounded-xl p-3">
-            <div className="flex items-center gap-2 mb-1">
-              <GraduationCap size={14} className="text-cyan-300" />
-              <span className="text-xs text-cyan-200 font-semibold uppercase tracking-wide">Students</span>
-            </div>
-            <div className="text-white font-bold text-sm">Piyush Patel</div>
-            <div className="text-blue-200 text-xs">24BCB7172</div>
-            <div className="text-white font-bold text-sm mt-1">Jayita</div>
-            <div className="text-blue-200 text-xs">24BCB7032</div>
-          </div>
-          <div className="bg-white/10 rounded-xl p-3">
-            <div className="flex items-center gap-2 mb-1">
-              <Users size={14} className="text-cyan-300" />
-              <span className="text-xs text-cyan-200 font-semibold uppercase tracking-wide">Programme</span>
-            </div>
-            <div className="text-white font-bold text-sm">B.Tech Computer Science</div>
-            <div className="text-blue-200 text-xs">& Business Systems</div>
-          </div>
-          <div className="bg-white/10 rounded-xl p-3">
-            <div className="flex items-center gap-2 mb-1">
-              <Database size={14} className="text-cyan-300" />
-              <span className="text-xs text-cyan-200 font-semibold uppercase tracking-wide">University</span>
-            </div>
-            <div className="text-white font-bold text-sm">VIT-AP University</div>
-            <div className="text-blue-200 text-xs">Amaravati, Andhra Pradesh</div>
-          </div>
+        <div className="text-sm text-slate-300 mt-1">
+          24BCB7172
         </div>
       </div>
 
+      <div>
+        <div className="text-lg sm:text-xl font-bold tracking-tight text-white">
+          Jayita
+        </div>
+        <div className="text-sm text-slate-300 mt-1">
+          24BCB7032
+        </div>
+      </div>
+    </div>
+
+    {/* Programme */}
+    <div className="rounded-xl p-4 border border-white/10 bg-white/5">
+      <div className="flex items-center gap-2 mb-4">
+        <Users size={18} className="text-cyan-300" />
+        <span className="text-xs text-cyan-200 font-bold uppercase tracking-widest">
+          Programme
+        </span>
+      </div>
+
+      <div className="text-lg font-bold text-white leading-relaxed">
+        B.Tech Computer Science
+      </div>
+      <div className="text-sm text-slate-300 mt-1">
+        & Business Systems
+      </div>
+    </div>
+
+    {/* University */}
+    <div className="rounded-xl p-4 border border-white/10 bg-white/5">
+      <div className="flex items-center gap-2 mb-4">
+        <Database size={18} className="text-cyan-300" />
+        <span className="text-xs text-cyan-200 font-bold uppercase tracking-widest">
+          University
+        </span>
+      </div>
+
+      <div className="text-lg font-bold text-white leading-relaxed">
+        VIT-AP University
+      </div>
+      <div className="text-sm text-slate-300 mt-1">
+        Amaravati, Andhra Pradesh
+      </div>
+    </div>
+  </div>
+</div>
+```
       {/* Methodology */}
       <div>
         <h3 className="text-xl font-bold text-navy mb-5">Methodology</h3>
