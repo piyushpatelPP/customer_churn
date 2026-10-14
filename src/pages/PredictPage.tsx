@@ -247,7 +247,7 @@ const PredictPage: React.FC<PredictPageProps> = ({ initialInput, onClearInitial 
         <p className="text-slate-500 text-sm">Fill in customer details and click Analyze to get a simulated churn risk assessment.</p>
         <div className="mt-2 inline-flex items-center gap-1.5 bg-amber-50 border border-amber-200 rounded-full px-3 py-1">
           <FlaskConical size={12} className="text-amber-500" />
-          <span className="text-xs text-amber-600 font-semibold">DEMO MODE · Simulated predictions · Live model inference is not connected</span>
+          <span className="text-xs text-amber-600 font-semibold"> · Simulated predictions </span>
         </div>
       </div>
 
