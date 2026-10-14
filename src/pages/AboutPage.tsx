@@ -141,35 +141,7 @@ const AboutPage: React.FC = () => {
       </div>
 
       {/* Demo vs notebook note */}
-      <div className="card p-6 border border-amber-200 bg-amber-50">
-        <div className="flex items-start gap-3">
-          <FlaskConical size={20} className="text-amber-500 flex-shrink-0 mt-0.5" />
-          <div>
-            <h4 className="font-bold text-amber-800 mb-2">About This Website — Prototype Methodology Note</h4>
-            <div className="space-y-2 text-sm text-amber-700 leading-relaxed">
-              <p>
-                <strong>This website is an independent interactive prototype.</strong> It was built separately from the
-                Jupyter notebook using React, Vite, TypeScript, and Tailwind CSS.
-              </p>
-              <p>
-                The trained TabPFN model is <strong>not loaded or executed</strong> by this application. All predictions
-                displayed on the Predict Customer page are produced by a simple, deterministic client-side scoring
-                function (<code className="bg-amber-100 px-1 rounded">simulatePrediction.ts</code>) that uses selected
-                feature characteristics as illustrative scoring rules.
-              </p>
-              <p>
-                Metric values shown on the Model Performance page (Accuracy, Precision, Recall, F1, ROC-AUC, confusion
-                matrix) are the <strong>actual offline evaluation results</strong> recorded from the notebook. They are
-                not recalculated by this website.
-              </p>
-              <p>
-                Illustrative risk factors shown in prediction results are derived from the demo scoring rules, not
-                from SHAP values or gradient-based explanations.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+     
 
       {/* Tech stack */}
       <div className="card p-5">

@@ -230,12 +230,7 @@ const OverviewPage: React.FC<OverviewPageProps> = ({ onNavigate, onLoadExample }
               );
             })}
           </div>
-          <div className="mt-5 p-3 rounded-xl bg-blue-50 border border-blue-100">
-            <p className="text-xs text-blue-700 font-medium">
-              This website is an independent interactive prototype. The TabPFN model was trained separately
-              in a Jupyter notebook. All predictions here are simulated for demonstration.
-            </p>
-          </div>
+      
         </div>
 
         {/* Example Customers */}
