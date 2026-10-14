@@ -274,11 +274,11 @@ const OverviewPage: React.FC<OverviewPageProps> = ({ onNavigate, onLoadExample }
       <div className="flex items-center justify-center gap-2 py-2">
         <FlaskConical size={14} className="text-amber-500" />
         <span className="text-xs text-amber-600 font-semibold">
-          DEMO MODE · Simulated predictions · Live model inference is not connected
+          Simulated predictions
         </span>
       </div>
     </div>
   );
-};
+};  
 
 export default OverviewPage;

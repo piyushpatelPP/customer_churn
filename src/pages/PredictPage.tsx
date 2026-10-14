@@ -190,7 +190,7 @@ const ResultPanel: React.FC<{ result: PredictionResult; input: CustomerInput; on
 
       {result.isPredefined && (
         <p className="text-center text-xs text-slate-400">
-          ✓ This matched a predefined demo profile with a fixed illustrative result.
+          ✓ This matched a predefined demo profile .
         </p>
       )}
     </div>

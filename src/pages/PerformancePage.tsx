@@ -44,13 +44,12 @@ const PerformancePage: React.FC = () => {
     <div className="p-6 space-y-6 max-w-7xl mx-auto">
       <div className="mb-4">
         <h2 className="text-2xl font-bold text-navy mb-1">Model Performance</h2>
-        <p className="text-slate-500 text-sm">
-          Offline evaluation results recorded from the Jupyter notebook. Not recalculated by this website.
-        </p>
+        
         <div className="mt-2 inline-flex items-center gap-1.5 bg-slate-100 border border-slate-200 rounded-full px-3 py-1">
           <Info size={12} className="text-slate-500" />
           <span className="text-xs text-slate-600 font-semibold">
-            Offline notebook evaluation results · Test set: {total.toLocaleString()} samples
+            
+           evaluation results · Test set: {total.toLocaleString()} samples
           </span>
         </div>
       </div>
